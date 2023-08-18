@@ -1,0 +1,31 @@
+
+<div class="container">
+  <h1 class="my-4">All Movies</h1>
+  <%= link_to 'Create New Movie', new_movie_path, class: 'btn btn-primary mb-4' %>
+  <%= link_to 'Go Back to Lists', lists_path, class: 'btn btn-secondary mb-4' %>
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <%= link_to movie_path(movie) do %>
+            <%= image_tag movie.poster_url, class: "card-img-top", alt: movie.title %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= movie.title %></h5>
+            <p class="card-text"><%= movie.overview %></p>
+            <p class="card-text">Rating: <%= movie.ratings %></p>
+          </div>
+          <% @lists.each do |list| %>
+            <%= form_tag list_path(list), method: :post, class: "form-inline" do %>
+              <%= hidden_field_tag :movie_id, movie.id %>
+              <%= submit_tag "Bookmark", class: "btn btn-primary" %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<%############# TEST V2 ############%>

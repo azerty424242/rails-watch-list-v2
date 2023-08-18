@@ -1,0 +1,54 @@
+
+
+
+
+<%# <div class="container d-flex align-items-center justify-content-center"> %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1 class="my-4"><%= @movie.title %></h1>
+      <%= image_tag @movie.poster_url, class: "img-fluid rounded mb-4", alt: @movie.title %>
+      <p><strong>Overview:</strong></p>
+      <p><%= @movie.overview %></p>
+      <p><strong>Rating:</strong> <%= @movie.ratings %></p>
+    </div>
+
+
+    <div class="col-md-4 mt-5">
+      <h3>Other Content</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae odio vitae justo facilisis consequat vel eu lectus. Sed nec risus vel mauris hendrerit varius. Nulla in felis ac mauris ultrices fermentum. Pellentesque pharetra odio at volutpat tempor.</p>
+
+      <!-- Buttons -->
+      <div class="mb-3">
+        <a href="#" class="btn btn-primary mr-2">Watch Trailer</a>
+        <a href="#" class="btn btn-success mr-2">Buy Tickets</a>
+        <a href="#" class="btn btn-info">Add to Wishlist</a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="mb-3">
+        <p>Share this movie:</p>
+        <a href="#" class="btn btn-outline-primary mr-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="btn btn-outline-info mr-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="btn btn-outline-danger"><i class="fab fa-pinterest"></i></a>
+      </div>
+
+      <!-- Additional Content -->
+      <h5>Cast</h5>
+      <ul>
+        <li>Actor 1</li>
+        <li>Actor 2</li>
+        <li>Actor 3</li>
+      </ul>
+
+      <h5>Reviews</h5>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h6 class="card-title">User 1</h6>
+          <p class="card-text">This movie was amazing!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
